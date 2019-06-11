@@ -35,7 +35,7 @@ class TweetsController < ApplicationController
 
   get '/tweets/:id' do
     if logged_in?
-      binding.pry
+    #  binding.pry
       @tweet = Tweet.find_by(id: params[:id])
       erb :'tweets/show'
     else
@@ -54,7 +54,7 @@ class TweetsController < ApplicationController
 
   patch '/tweets/:id' do
     if logged_in?
-      binding.pry
+    #  binding.pry
       @tweet = Tweet.find_by(id: params[:id])
       @tweet.update(content: params["content"])
       erb :'tweets/show'
