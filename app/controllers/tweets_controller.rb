@@ -56,6 +56,7 @@ class TweetsController < ApplicationController
     if logged_in?
     #  binding.pry
       if params["content"] == ""
+        binding.pry
         erb :'tweets/edit'
       else
         @tweet = Tweet.find_by(id: params[:id])
