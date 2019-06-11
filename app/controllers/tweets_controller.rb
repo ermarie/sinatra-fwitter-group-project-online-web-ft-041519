@@ -57,7 +57,7 @@ class TweetsController < ApplicationController
       binding.pry
       @tweet = Tweet.find_by(id: params[:id])
       @tweet.update(content: params["content"])
-      redirect '/tweets/:id'
+      erb :'tweets/show'
     else
       redirect '/login'
     end
