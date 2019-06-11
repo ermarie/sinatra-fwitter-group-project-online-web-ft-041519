@@ -67,7 +67,7 @@ class TweetsController < ApplicationController
     end
   end
 
-  post '/tweets/:id/delete' do
+  delete '/tweets/:id' do
     redirect '/tweets'
   end
 
