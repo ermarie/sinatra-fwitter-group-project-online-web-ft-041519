@@ -56,7 +56,7 @@ class TweetsController < ApplicationController
     if logged_in?
     #  binding.pry
       if params["content"] == ""
-        redirect '/tweets/#{params[:id]}/edit'
+        redirect '/tweets/:id/edit'
       else
         @tweet = Tweet.find_by(id: params[:id])
         @tweet.update(content: params["content"])
